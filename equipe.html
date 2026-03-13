@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notre Équipe - Clinique Lumière</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header"> 
-        <div class="container">
-            <a href="index.html" class="logo">Clinique Lumière</a>
-            <nav class="nav">
+    <header class="header scrolled force-scrolled" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Clinique<span>Lumière</span></a>
+            <button class="mobile-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav" id="nav-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -24,52 +28,90 @@
         </div>
     </header>
 
-    <section class="team">
+    <main>
+        <section class="team section-padding" style="margin-top: 80px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="tag">Nos Professionnels</span>
+                    <h2>Notre équipe médicale</h2>
+                    <p>Rencontrez nos professionnels de santé dévoués à votre bien-être.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 1/1;">
+                            <img src="medecin 2.webp" alt="Dr. Abdellah Bensalem">
+                        </div>
+                        <h3>Dr. Abdellah Bensalem</h3>
+                        <p class="tag" style="font-size: 0.75rem;">Médecin généraliste</p>
+                        <p>Diplômé avec plus de 15 ans d'expérience en médecine générale.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 1/1;">
+                            <img src="medecin 1.webp" alt="Dr. Assia Bennani">
+                        </div>
+                        <h3>Dr. Assia Bennani</h3>
+                        <p class="tag" style="font-size: 0.75rem;">Pédiatre</p>
+                        <p>Spécialiste des soins pédiatriques avec une approche douce.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 1/1;">
+                            <img src="médecin 3.jpg" alt="Dr. Leila Barakat">
+                        </div>
+                        <h3>Dr. Leila Barakat</h3>
+                        <p class="tag" style="font-size: 0.75rem;">Cardiologue</p>
+                        <p>Expert en prévention et traitement des maladies cardiovasculaires.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 1/1;">
+                            <img src="medecin 4.webp" alt="Dr. Youssef El Amrani">
+                        </div>
+                        <h3>Dr. Youssef El Amrani</h3>
+                        <p class="tag" style="font-size: 0.75rem;">Radiologue</p>
+                        <p>Spécialiste en imagerie médicale avec une expertise en IRM.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
         <div class="container">
-            <h1>Notre équipe médicale</h1>
-            <p class="section-intro">Rencontrez nos professionnels de santé dévoués à votre bien-être.</p>
-            <br><br>
-            <div class="team-grid row gap-5">
-                <div class="team-member col-md-5 me-5">
-                    <img class="img-fluid" src="medecin 2.webp" alt="Dr. Abdellah Bensalem">
-                    <h3>Dr. Abdellah Bensalem</h3>
-                    <p class="specialty">Médecin généraliste</p>
-                    <p class="bio">Diplômée de l'Université de Casablanca, avec plus de 15 ans d'expérience en médecine générale.</p>
-                    <a href="rendezvous.html" class="btn-team">Prendre RDV</a>
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="logo footer-logo">Clinique<span>Lumière</span></a>
+                    <p class="footer-desc">Votre santé, notre priorité. Des soins d'excellence prodigués par des experts passionnés.</p>
                 </div>
-                
-                <div class="team-member col-md-5 ms-5">
-                    <img class="img-fluid" src="medecin 1.webp" alt="Dr. Assia Bennani">
-                    <h3>Dr. Assia Bennani</h3>
-                    <p class="specialty">Pédiatre</p>
-                    <p class="bio">Spécialiste des soins pédiatriques avec une approche douce et rassurante pour les enfants.</p>
-                    <a href="rendezvous.html" class="btn-team">Prendre RDV</a>
+                <div class="footer-links">
+                    <h3>Contact Rapide</h3>
+                    <ul>
+                        <li>📍 123 Rue de la Santé, Casablanca</li>
+                        <li>📞 <a href="tel:+212600000000">06 00 00 00 00</a></li>
+                        <li>✉️ <a href="mailto:contact@cliniquelumiere.ma">contact@cliniquelumiere.ma</a></li>
+                    </ul>
                 </div>
-                
-                <div class="team-member col-md-5 me-5">
-                    <img class="img-fluid" src="médecin 3.jpg" alt="Dr. Leila Barakat">
-                    <h3>Dr. Leila Barakat</h3>
-                    <p class="specialty">Cardiologue</p>
-                    <p class="bio">Expert en prévention et traitement des maladies cardiovasculaires.</p>
-                    <a href="rendezvous.html" class="btn-team">Prendre RDV</a>
-                </div>
-                
-                <div class="team-member col-md-5 ms-5">
-                    <img class="img-fluid" src="medecin 4.webp" alt="Dr. Youssef El Amrani">
-                    <h3>Dr. Youssef El Amrani</h3>
-                    <p class="specialty">Radiologue</p>
-                    <p class="bio">Spécialiste en imagerie médicale avec une expertise en IRM et scanner.</p>
-                    <a href="rendezvous.html" class="btn-team">Prendre RDV</a>
+                <div class="footer-hours">
+                    <h3>Horaires</h3>
+                    <ul>
+                        <li><span>Lundi - Vendredi:</span> 8h00 - 20h00</li>
+                        <li><span>Samedi:</span> 9h00 - 18h00</li>
+                        <li><span class="urgency">Dimanche: Urgences 24/7</span></li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="team-cta">
-                <h2>Prêt à prendre rendez-vous ?</h2>
-                <p>Notre équipe est à votre disposition pour répondre à vos besoins de santé.</p>
-                <a href="rendezvous.html" class="btn btn-primary">Prendre un rendez-vous</a>
+            <div class="copyright">
+                <p>© 2026 Clinique Lumière. Tous droits réservés.</p>
             </div>
-            <br><br>
         </div>
-    </section>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

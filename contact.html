@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Clinique Lumière</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">Clinique Lumière</a>
-            <nav class="nav">
+    <header class="header scrolled force-scrolled" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Clinique<span>Lumière</span></a>
+            <button class="mobile-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav" id="nav-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -19,82 +24,104 @@
                     <li><a href="rendezvous.html">Rendez-vous</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
-            </nav> 
+            </nav>
         </div>
     </header>
 
-    <section class="contact-page">
-        <div class="container">
-            <h1>Nous contacter</h1>
-            <p class="section-intro">Pour toute question ou information, n'hésitez pas à nous contacter par téléphone, email ou via le formulaire ci-dessous.</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-method">
-                        <h3>Adresse</h3>
-                        <address>
-                            Clinique Lumière<br>
-                            123 Rue de la Santé<br>
-                            28666 Casablanca,Maroc                        </address>
-                        <a href="https://maps.google.com" class="btn-map" target="_blank">Voir sur la carte</a>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <h3>Téléphone</h3>
-                        <p><a href="tel:+212618330907">06 18 33 09 07</a></p>
-                        <p>Urgences 24/7: <a href="tel:+212618330907">06 18 33 09 07</a></p>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <h3>Email</h3>
-                        <p><a href="mailto:Contact-CliniqueLumiere@gmail.com">Contact-CliniqueLumiere@gmail.com</a></p>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <h3>Horaires d'ouverture</h3>
-                        <ul class="opening-hours">
-                            <li><span>Lundi-Vendredi:</span> 8h-20h</li>
-                            <li><span>Samedi:</span> 9h-18h</li>
-                            <li><span>Dimanche:</span> Urgences seulement</li>
-                        </ul>
-                    </div>
+    <main>
+        <section class="contact-page section-padding" style="margin-top: 80px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="tag">Assistance</span>
+                    <h2>Nous contacter</h2>
+                    <p>Pour toute question ou information, n'hésitez pas à nous contacter par téléphone, email ou via le formulaire ci-dessous.</p>
                 </div>
                 
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="contact-name">Nom complet</label>
-                        <input type="text" id="contact-name" name="name" required>
+                <div class="about-content" style="align-items: flex-start;">
+                    <div class="feature-card" style="text-align: left;">
+                        <h3 style="margin-bottom: 20px;">Coordonnées</h3>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="color: var(--primary); font-size: 1rem; margin-bottom: 5px;">📍 Adresse</h4>
+                            <p style="margin-bottom: 10px;">123 Rue de la Santé<br>28666 Casablanca, Maroc</p>
+                            <a href="https://maps.google.com" class="btn btn-outline" target="_blank" style="padding: 5px 15px; font-size: 0.85rem;">Voir sur la carte</a>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="color: var(--primary); font-size: 1rem; margin-bottom: 5px;">📞 Téléphone</h4>
+                            <p>Standard: <a href="tel:+212600000000" style="color: var(--secondary); font-weight: 600;">06 00 00 00 00</a><br>
+                            <span class="urgency">Urgences 24/7: 06 00 00 00 00</span></p>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="color: var(--primary); font-size: 1rem; margin-bottom: 5px;">✉️ Email</h4>
+                            <p><a href="mailto:Contact-CliniqueLumiere@gmail.com" style="color: var(--secondary); font-weight: 600;">Contact-CliniqueLumiere@gmail.com</a></p>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="contact-email">Email</label>
-                        <input type="email" id="contact-email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contact-subject">Sujet</label>
-                        <select id="contact-subject" name="subject" required>
-                            <option value="">-- Sélectionnez un sujet --</option>
-                            <option value="info">Demande d'information</option>
-                            <option value="rdv">Rendez-vous</option>
-                            <option value="urgence">Urgence médicale</option>
-                            <option value="autre">Autre demande</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contact-message">Message</label>
-                        <textarea id="contact-message" name="message" rows="6" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
-                </form>
-            </div>
-            
-            
-        </div>
-    </section>
 
-    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Nom complet</label>
+                            <input type="text" id="contact-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-subject">Sujet</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="">-- Sélectionnez un sujet --</option>
+                                <option value="info">Demande d'information</option>
+                                <option value="rdv">Question sur un rendez-vous</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="logo footer-logo">Clinique<span>Lumière</span></a>
+                    <p class="footer-desc">Votre santé, notre priorité. Des soins d'excellence prodigués par des experts passionnés.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Rapide</h3>
+                    <ul>
+                        <li>📍 123 Rue de la Santé, Casablanca</li>
+                        <li>📞 <a href="tel:+212600000000">06 00 00 00 00</a></li>
+                        <li>✉️ <a href="mailto:contact@cliniquelumiere.ma">contact@cliniquelumiere.ma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Horaires</h3>
+                    <ul>
+                        <li><span>Lundi - Vendredi:</span> 8h00 - 20h00</li>
+                        <li><span>Samedi:</span> 9h00 - 18h00</li>
+                        <li><span class="urgency">Dimanche: Urgences 24/7</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 Clinique Lumière. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

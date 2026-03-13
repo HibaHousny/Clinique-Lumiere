@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinique Lumière - Accueil</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">Clinique Lumière</a>
-            <nav class="nav">
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Clinique<span>Lumière</span></a>
+            <button class="mobile-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav" id="nav-menu">
                 <ul>
                     <li><a href="index.html" class="active">Accueil</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -23,81 +28,93 @@
         </div> 
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Soins de santé exceptionnels pour votre famille</h1>
-            <p class="subtitle">Nous fournissons les meilleurs services médicaux avec compassion et expertise.</p>
-            <div class="cta-buttons">
-                <a href="rendezvous.html" class="btn btn-primary">Prendre rendez-vous</a>
-                <a href="services.html" class="btn btn-secondary">Nos services</a>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Soins de santé d'excellence pour votre famille</h1>
+                <p class="subtitle">Nous fournissons les meilleurs services médicaux avec compassion, expertise et des équipements de pointe.</p>
+                <div class="cta-buttons">
+                    <a href="rendezvous.html" class="btn btn-primary">Prendre rendez-vous</a>
+                    <a href="services.html" class="btn btn-secondary">Découvrir nos services</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>À propos de notre clinique</h2>
-                    <p>Notre clinique est un espace de santé moderne et accueillant, dédié au bien-être de nos patients. Nous offrons une large gamme de soins médicaux avec une équipe de professionnels qualifiés, à l’écoute et soucieux de fournir un service de qualité dans un cadre calme et rassurant.</p>
-                    <a href="equipe.html" class="btn btn-secondary">Découvrir notre équipe</a>
-                </div>
-                <div class="about-image">
-                    <img src="hopital.jpg" alt="Extérieur de la Clinique Lumière">
+        <section class="about section-padding">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <span class="tag">Notre Clinique</span>
+                        <h2>L'excellence médicale à dimension humaine</h2>
+                        <p>Notre clinique est un espace de santé moderne et accueillant, dédié au bien-être de nos patients. Nous offrons une large gamme de soins médicaux avec une équipe de professionnels qualifiés, à l’écoute et soucieux de fournir un service de qualité dans un cadre calme et rassurant.</p>
+                        <a href="equipe.html" class="btn btn-outline">Rencontrer nos experts &rarr;</a>
+                    </div>
+                    <div class="about-image fade-in">
+                        <div class="img-wrapper">
+                            <img src="hopital.jpg" alt="Extérieur de la Clinique Lumière">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="features">
-        <div class="container"> 
-            <h2>Pourquoi choisir notre clinique ?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Équipements modernes</h3>
-                    <p>Technologie de pointe pour des diagnostics précis et des traitements efficaces.</p>
+        <section class="features section-padding">
+            <div class="container"> 
+                <div class="section-header text-center">
+                    <h2>Pourquoi nous choisir ?</h2>
+                    <p>Une prise en charge globale pour votre tranquillité d'esprit.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Urgences 24/7</h3>
-                    <p>Service d'urgence disponible à toute heure pour répondre à vos besoins.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Approche humaine</h3>
-                    <p>Écoute et compassion au cœur de notre pratique médicale.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏥</div>
+                        <h3>Équipements modernes</h3>
+                        <p>Technologie de pointe pour des diagnostics ultra-précis et des traitements efficaces.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚑</div>
+                        <h3>Urgences 24/7</h3>
+                        <p>Une équipe de garde disponible à toute heure pour répondre à vos urgences médicales.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Approche humaine</h3>
+                        <p>Écoute attentive, respect et compassion au cœur de notre pratique médicale quotidienne.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-info">
-                    <h3>Clinique Lumière</h3>
-                    <p>123 Rue de la Santé<br>28666 Casablanca,Maroc</p>
-                    <p>Tél: 06 18 33 09 07</p>
+                    <a href="index.html" class="logo footer-logo">Clinique<span>Lumière</span></a>
+                    <p class="footer-desc">Votre santé, notre priorité. Des soins d'excellence prodigués par des experts passionnés.</p>
                 </div>
                 <div class="footer-links">
-                    <h3>Liens rapides</h3>
+                    <h3>Contact Rapide</h3>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="equipe.html">Notre équipe</a></li>
-                        <li><a href="rendezvous.html">Rendez-vous</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li>📍 123 Rue de la Santé, Casablanca</li>
+                        <li>📞 <a href="tel:+212600000000">06 00 00 00 00</a></li>
+                        <li>✉️ <a href="mailto:contact@cliniquelumiere.ma">contact@cliniquelumiere.ma</a></li>
                     </ul>
                 </div>
                 <div class="footer-hours">
-                    <h3>Horaires d'ouverture</h3>
-                    <p>Lundi-Vendredi: 8h-20h</p>
-                    <p>Samedi: 9h-18h</p>
-                    <p>Dimanche: Urgences seulement</p>
+                    <h3>Horaires</h3>
+                    <ul>
+                        <li><span>Lundi - Vendredi:</span> 8h00 - 20h00</li>
+                        <li><span>Samedi:</span> 9h00 - 18h00</li>
+                        <li><span class="urgency">Dimanche: Urgences 24/7</span></li>
+                    </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Clinique Lumière. Tous droits réservés.</p>
+                <p>© 2026 Clinique Lumière. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

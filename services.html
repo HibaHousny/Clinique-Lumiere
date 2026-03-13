@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Services - Clinique Lumière</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">Clinique Lumière</a>
-            <nav class="nav">
+    <header class="header scrolled force-scrolled" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Clinique<span>Lumière</span></a>
+            <button class="mobile-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav" id="nav-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
@@ -24,75 +27,105 @@
             </nav>
         </div>
     </header>
-<br><br><br><br>
-    <section class="services">
-        <div class="container">
-            <h1>Nos Services Médicaux</h1>
-            <p class="section-intro">Découvrez la gamme complète de services médicaux que nous proposons pour le bien-être de votre famille.</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img class="img-fluid" src="medecine.webp" alt="Médecine générale">
-                    </div>
-                    <h3>Médecine générale</h3>
-                    <p>Soins primaires complets pour toute la famille avec nos médecins généralistes expérimentés.</p>
-                    <a href="rendezvous.html" class="btn-service">Prendre RDV</a>
+
+    <main>
+        <section class="services section-padding" style="margin-top: 80px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="tag">Expertise</span>
+                    <h2>Nos Services Médicaux</h2>
+                    <p>Découvrez la gamme complète de services médicaux que nous proposons pour le bien-être de votre famille.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img class="img-fluid" src="Pediatre.jpg" alt="Pédiatrie">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 16/9;">
+                            <img src="medecine.webp" alt="Médecine générale">
+                        </div>
+                        <h3>Médecine générale</h3>
+                        <p>Soins primaires complets pour toute la famille avec nos médecins expérimentés.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
                     </div>
-                    <h3>Pédiatrie</h3>
-                    <p>Soins spécialisés pour les enfants de tous âges dans un environnement adapté et rassurant.</p>
-                    <a href="rendezvous.html" class="btn-service">Prendre RDV</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img class="img-fluid" src="imagerie.jpg" alt="Imagerie médicale">
+                    
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 16/9;">
+                            <img src="Pediatre.jpg" alt="Pédiatrie">
+                        </div>
+                        <h3>Pédiatrie</h3>
+                        <p>Soins spécialisés pour les enfants dans un environnement rassurant.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
                     </div>
-                    <h3>Imagerie médicale</h3>
-                    <p>Équipements modernes (IRM, scanner, échographie) pour des diagnostics précis et rapides.</p>
-                    <a href="rendezvous.html" class="btn-service">Prendre RDV</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img class="img-fluid" src="Cardiologie.jpg" alt="Cardiologie">
+                    
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 16/9;">
+                            <img src="imagerie.jpg" alt="Imagerie médicale">
+                        </div>
+                        <h3>Imagerie médicale</h3>
+                        <p>Équipements modernes (IRM, scanner) pour des diagnostics précis.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
                     </div>
-                    <h3>Cardiologie</h3>
-                    <p>Prévention, diagnostic et traitement des maladies cardiovasculaires.</p>
-                    <a href="rendezvous.html" class="btn-service">Prendre RDV</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img class="img-fluid" src="dermatologie.jpg" alt="Dermatologie">
+                    
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 16/9;">
+                            <img src="Cardiologie.jpg" alt="Cardiologie">
+                        </div>
+                        <h3>Cardiologie</h3>
+                        <p>Prévention, diagnostic et traitement des maladies cardiovasculaires.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
                     </div>
-                    <h3>Dermatologie</h3>
-                    <p>Soins de la peau, diagnostic et traitement des maladies cutanées.</p>
-                    <a href="rendezvous.html" class="btn-service">Prendre RDV</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img class="img-fluid" src="gynécoloque.jpg" alt="Gynécologie">
+                    
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 16/9;">
+                            <img src="dermatologie.jpg" alt="Dermatologie">
+                        </div>
+                        <h3>Dermatologie</h3>
+                        <p>Soins de la peau, diagnostic et traitement des maladies cutanées.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
                     </div>
-                    <h3>Gynécologie</h3>
-                    <p>Suivi gynécologique complet et accompagnement personnalisé.</p>
-                    <a href="rendezvous.html" class="btn-service">Prendre RDV</a>
+                    
+                    <div class="feature-card">
+                        <div class="img-wrapper" style="margin-bottom: 20px; aspect-ratio: 16/9;">
+                            <img src="gynécoloque.jpg" alt="Gynécologie">
+                        </div>
+                        <h3>Gynécologie</h3>
+                        <p>Suivi gynécologique complet et accompagnement personnalisé.</p>
+                        <a href="rendezvous.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Prendre RDV</a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="emergency-notice">
-                <h3>Service d'urgence</h3>
-                <p>Notre service d'urgence est ouvert 24h/24, 7j/7 pour prendre en charge vos urgences médicales.</p>
-                <a href="tel:+212 618330907" class="btn-emergency">Appeler les urgences</a>
-        </div>
-        <br><br>
-            
-    </section>
+        </section>
+    </main>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="logo footer-logo">Clinique<span>Lumière</span></a>
+                    <p class="footer-desc">Votre santé, notre priorité. Des soins d'excellence prodigués par des experts passionnés.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Rapide</h3>
+                    <ul>
+                        <li>📍 123 Rue de la Santé, Casablanca</li>
+                        <li>📞 <a href="tel:+212600000000">06 00 00 00 00</a></li>
+                        <li>✉️ <a href="mailto:contact@cliniquelumiere.ma">contact@cliniquelumiere.ma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Horaires</h3>
+                    <ul>
+                        <li><span>Lundi - Vendredi:</span> 8h00 - 20h00</li>
+                        <li><span>Samedi:</span> 9h00 - 18h00</li>
+                        <li><span class="urgency">Dimanche: Urgences 24/7</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 Clinique Lumière. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-</html>   
+</html>

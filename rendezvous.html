@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prendre RDV - Clinique Lumière</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">Clinique Lumière</a>
-            <nav class="nav"> 
+    <header class="header scrolled force-scrolled" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Clinique<span>Lumière</span></a>
+            <button class="mobile-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav" id="nav-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -20,87 +25,111 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-        </div> 
+        </div>
     </header>
 
-    <section class="appointment">
-        <div class="container">
-            <div class="appointment-header">
-                <h1>Prendre rendez-vous</h1>
-                <p class="section-intro">Remplissez le formulaire ci-dessous pour demander un rendez-vous. Notre équipe vous contactera pour confirmer.</p>
-            </div>
-            
-            <div class="appointment-content">
-                <form class="rdv-form">
-                    <div class="form-group">
-                        <label for="name">Nom complet</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Service demandé</label>
-                        <select id="service" name="service" required>
-                            <option value="">-- Sélectionnez un service --</option>
-                            <option value="general">Médecine générale</option>
-                            <option value="pediatrie">Pédiatrie</option>
-                            <option value="cardiologie">Cardiologie</option>
-                            <option value="dermatologie">Dermatologie</option>
-                            <option value="gynecologie">Gynécologie</option>
-                            <option value="imagerie">Imagerie médicale</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="doctor">Médecin préféré (optionnel)</label>
-                        <select id="doctor" name="doctor">
-                            <option value="">-- Aucune préférence --</option>
-                            <option value="dr-martin">Dr. Abdellah Bensalem</option>
-                            <option value="dr-lefevre">Dr. Leila Barakat</option>
-                            <option value="dr-dubois">Dr. Youssef El Amrani</option>
-                            <option value="dr-leroy">Dr. Assia Bennani</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="date">Date souhaitée</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message supplémentaire</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">Envoyer la demande</button>
-                </form>
+    <main>
+        <section class="appointment section-padding" style="margin-top: 80px;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="tag">Consultation</span>
+                    <h2>Prendre rendez-vous</h2>
+                    <p>Remplissez le formulaire ci-dessous pour demander un rendez-vous. Notre équipe vous contactera pour confirmer.</p>
+                </div>
                 
-                <div class="appointment-info">
-                    <h3>Informations importantes</h3>
-                    <ul>
-                        <li>Nous vous contacterons dans les 24 heures pour confirmer votre rendez-vous</li>
-                        <li>Présentez-vous 10 minutes avant l'heure du rendez-vous</li>
-                        <li>Pensez à apporter votre carte vitale et vos documents médicaux</li>
-                    </ul>
-                    
-                    <div class="emergency-contact">
-                        <h3>Urgences médicales ?</h3>
-                        <p>Appeler <a href="tel:+212 618330907">06 18 33 09 07</a> ou présentez-vous directement à la clinique</p>
+                <div class="about-content" style="align-items: flex-start;">
+                    <form class="rdv-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required placeholder="Ex: Ahmed Alaoui">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="06 XX XX XX XX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service demandé</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Sélectionnez un service --</option>
+                                <option value="general">Médecine générale</option>
+                                <option value="pediatrie">Pédiatrie</option>
+                                <option value="cardiologie">Cardiologie</option>
+                                <option value="dermatologie">Dermatologie</option>
+                                <option value="gynecologie">Gynécologie</option>
+                                <option value="imagerie">Imagerie médicale</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="doctor">Médecin préféré (optionnel)</label>
+                            <select id="doctor" name="doctor">
+                                <option value="">-- Aucune préférence --</option>
+                                <option value="dr-bensalem">Dr. Abdellah Bensalem</option>
+                                <option value="dr-barakat">Dr. Leila Barakat</option>
+                                <option value="dr-amrani">Dr. Youssef El Amrani</option>
+                                <option value="dr-bennani">Dr. Assia Bennani</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Date souhaitée</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer la demande</button>
+                    </form>
+
+                    <div class="feature-card" style="text-align: left;">
+                        <h3 style="margin-bottom: 20px;">Informations importantes</h3>
+                        <ul style="list-style-type: none; margin-bottom: 30px; color: var(--text-muted);">
+                            <li style="margin-bottom: 10px;">✅ Nous vous contacterons dans les 24h pour confirmer.</li>
+                            <li style="margin-bottom: 10px;">✅ Présentez-vous 10 minutes avant l'heure.</li>
+                            <li style="margin-bottom: 10px;">✅ Apportez votre CIN et documents médicaux.</li>
+                        </ul>
+                        
+                        <div style="background: var(--bg-light); padding: 20px; border-radius: 10px; border-left: 4px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 10px; font-size: 1.2rem;">Urgences médicales ?</h3>
+                            <p style="margin-bottom: 15px;">Ne remplissez pas ce formulaire. Appelez immédiatement ou présentez-vous à la clinique.</p>
+                            <a href="tel:+212600000000" class="btn btn-primary" style="background: var(--accent); width: 100%;">Appeler: 06 00 00 00 00</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="logo footer-logo">Clinique<span>Lumière</span></a>
+                    <p class="footer-desc">Votre santé, notre priorité. Des soins d'excellence prodigués par des experts passionnés.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Rapide</h3>
+                    <ul>
+                        <li>📍 123 Rue de la Santé, Casablanca</li>
+                        <li>📞 <a href="tel:+212600000000">06 00 00 00 00</a></li>
+                        <li>✉️ <a href="mailto:contact@cliniquelumiere.ma">contact@cliniquelumiere.ma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Horaires</h3>
+                    <ul>
+                        <li><span>Lundi - Vendredi:</span> 8h00 - 20h00</li>
+                        <li><span>Samedi:</span> 9h00 - 18h00</li>
+                        <li><span class="urgency">Dimanche: Urgences 24/7</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 Clinique Lumière. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
